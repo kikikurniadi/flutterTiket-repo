@@ -30,15 +30,17 @@ class HomePage extends StatelessWidget {
     ),
   ];
 
+   HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tiket'),
+        title: const Text('Tiket'),
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
             onPressed: () {
               // Tambahkan fungsi pencarian
             },
@@ -56,7 +58,7 @@ class HomePage extends StatelessWidget {
                 child: Image.asset('assets/images/BOM.jpg')
                 ),
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             // Kategori
             SizedBox(
               height: 100,
@@ -70,10 +72,10 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             // Daftar Event
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                 children: events.map((event) {
                   return EventCard(
@@ -100,7 +102,7 @@ class HomePage extends StatelessWidget {
   Widget _buildCategoryCard(String title, IconData icon) {
     return Container(
       width: 80,
-      margin: EdgeInsets.only(left: 16),
+      margin: const EdgeInsets.only(left: 16),
       child: Column(
         children: [
           CircleAvatar(
@@ -108,7 +110,7 @@ class HomePage extends StatelessWidget {
             backgroundColor: Colors.green,
             child: Icon(icon, color: Colors.white, size: 30),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(
             title,
             textAlign: TextAlign.center,

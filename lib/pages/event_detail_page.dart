@@ -4,7 +4,7 @@ import '../models/event.dart';
 class EventDetailPage extends StatelessWidget {
   final Event event;
 
-  EventDetailPage({required this.event});
+  const EventDetailPage({super.key, required this.event});
 
   @override
   Widget build(BuildContext context) {
@@ -24,28 +24,28 @@ class EventDetailPage extends StatelessWidget {
             ),
             // Informasi Event
             Padding(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     event.title,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(
                     '${event.date} • ${event.location}',
                     style: TextStyle(color: Colors.grey[600]),
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   Text(
                     event.description,
-                    style: TextStyle(fontSize: 16),
+                    style: const TextStyle(fontSize: 16),
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   // Tombol untuk membeli tiket
                   SizedBox(
                     width: double.infinity,
@@ -53,7 +53,7 @@ class EventDetailPage extends StatelessWidget {
                       onPressed: () {
                         // Tambahkan fungsi pembelian tiket
                       },
-                      child: Text('Beli Tiket'),
+                      child: const Text('Beli Tiket'),
                     ),
                   ),
                 ],
