@@ -4,6 +4,8 @@ class Event {
   final String date;
   final String location;
   final String description;
+  final String category;
+  final double price;
 
   Event({
     required this.title,
@@ -11,5 +13,7 @@ class Event {
     required this.date,
     required this.location,
     required this.description,
+    required this.category,
+    required this.price,
   });
 }
